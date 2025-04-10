@@ -1,0 +1,45 @@
+
+@font-face {
+    font-family: 'Mortend-light';
+    src: url('/static/assets/fonts/mortend-extended/MortendExtended-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mortend-regular';
+    src: url('/static/assets/fonts/mortend-extended/MortendExtended-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mortend-bold';
+    src: url('/static/assets/fonts/mortend-extended/MortendExtended-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mortend-extrabold';
+    src: url('/static/assets/fonts/mortend-extended/MortendExtended-Extrabold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mortend-outline';
+    src: url('/static/assets/fonts/mortend-extended/MortendExtended-Extrabold-Outline.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Neusa-light';
+    src: url('/static/assets/fonts/neusa-next/NeusaNext-Light.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Neusa-regular';
+    src: url('/static/assets/fonts/neusa-next/NeusaNext-Regular.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Neusa-medium';
+    src: url('/static/assets/fonts/neusa-next/NeusaNext-Medium.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Neusa-bold';
+    src: url('/static/assets/fonts/neusa-next/NeusaNext-Bold.otf') format('otf');
+}
