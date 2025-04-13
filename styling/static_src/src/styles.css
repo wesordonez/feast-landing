@@ -3,8 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {}
 
-@layer components {
-
-
+.section-diagonal-top {
+    @apply relative bg-primary;
+    clip-path: polygon(0 0, 100% 110px, 100% 100%, 0% 100%);
 }

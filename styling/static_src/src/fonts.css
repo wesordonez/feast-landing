@@ -26,20 +26,20 @@
 
 @font-face {
     font-family: 'Neusa-light';
-    src: url('/static/assets/fonts/neusa-next/NeusaNext-Light.otf') format('otf');
+    src: url('/static/assets/fonts/neusa-next/NeusaNext-Light.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Neusa-regular';
-    src: url('/static/assets/fonts/neusa-next/NeusaNext-Regular.otf') format('otf');
+    src: url('/static/assets/fonts/neusa-next/NeusaNext-Regular.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Neusa-medium';
-    src: url('/static/assets/fonts/neusa-next/NeusaNext-Medium.otf') format('otf');
+    src: url('/static/assets/fonts/neusa-next/NeusaNext-Medium.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Neusa-bold';
-    src: url('/static/assets/fonts/neusa-next/NeusaNext-Bold.otf') format('otf');
+    src: url('/static/assets/fonts/neusa-next/NeusaNext-Bold.otf') format('opentype');
 }
