@@ -9,3 +9,8 @@
     @apply relative bg-primary;
     clip-path: polygon(0 0, 100% 110px, 100% 100%, 0% 100%);
 }
+
+.diagonal-bottom {
+    @apply relative bg-secondary;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
+}
