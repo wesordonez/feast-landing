@@ -14,3 +14,12 @@
     @apply relative bg-secondary;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
 }
+
+/* class="step-card select-none flex gap-5 md:gap-10 p-5 md:px-10 border rounded-xl border-primary hover:border-white hover:border */
+.step-card {
+    @apply select-none flex gap-5 md:gap-10 p-5 md:px-10 rounded-xl border border-primary hover:border-white transition-all duration-300 cursor-pointer;
+}
+
+.step-card.active {
+    @apply border-white;
+}
