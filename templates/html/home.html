@@ -4,11 +4,11 @@
 {% load custom_tags %}
 
 {% block content %}
-<!-- Estilos personalizados -->
+<!-- Styles for owl carousel navigation buttons -->
 <style>
     .owl-nav {
         position: flex;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     .owl-nav button {
@@ -17,7 +17,8 @@
     }
 
     .owl-nav button span:hover {
-        background-color: #97752b;
+        color: #A57E2C;
+        background-color: white;
     }
 
     .owl-nav button span {
@@ -37,46 +38,45 @@
 <!-- Hero section -->
 <section class="select-none flex flex-col w-full min-h-[100vh] max-w-[100vw] overflow-hidden relative" id="hero-section">
 
-    <div class="flex flex-col lg:flex-row w-full h-full p-[5%] place-content-center min-h-[100vh] justify-around place-items-center gap-[40px] lg:max-gap-[110px]">
+    <div class="md:grid-cols-2 flex flex-col lg:flex-row w-full h-full px-[5%] place-content-center min-h-[100vh] justify-around place-items-center gap-[40px] lg:max-gap-[110px]">
 
         <div class="flex flex-col place-content-center w-full h-full lg:min-w-[500px] lg:max-w-[600px]">
             <img src="{% static './assets/logos/logo-hero.png' %}" alt="dashboard" class="w-[20%] h-[20%] mt-[80px]">
 
             <!-- Hero Title -->
-            <h1 class="text-3xl md:text-[40px] font-mortend-bold uppercase md:leading-[50px] mt-[40px]">
+            <h1 class="text-2xl md:text-[40px] font-mortend-bold uppercase md:leading-[50px] mt-[40px]">
                 the <br> restaurant <br> delivery <br> marketplace <br> without the crippling <br> fees.
             </h1>
 
             <!-- Hero Subtitle -->
-            <h2 class="font-neusa-regular text-xl mt-[20px] mb-[40px] p-2 text-justify max-md:max-w-full text-gray-600">
+            <h2 class="font-neusa-regular text-xl mt-[20px] mb-[40px] p-2 max-md:max-w-full text-gray-600">
                 FEAST empowers restaurants, couriers, and customers--no more third-party squeeze.
             </h2>
 
-            <!-- Form -->
-            <form name="email-form" method="get" class="flex rounded-lg overflow-hidden border border-gray-300 w-full">
-                <input type="text" placeholder="Enter your email" class="flex-1 px-4 py-2 focus:outline-none font-neusa-light lg:text-xl w-full focus:outline-none" />
-                <input type="submit" value="Subscribe" class="bg-secondary font-neusa-bold font-bold text-white text-xl px-8 py-4 m-2 ml-auto hover:bg-primary transition-colors rounded-lg"/>
-            </form>
+            <!-- Button -->
+            <a href="#cta-section" class="bg-secondary font-neusa-bold font-bold text-center text-white text-xl px-8 py-4 m-2 hover:bg-primary transition-colors rounded-lg">
+                Contact Us
+            </a>
 
             <!-- Hero Info -->
             <div class="flex flex-wrap gap-2 mt-[40px] justify-between w-full">
-                <div class="flex items-center font-neusa-regular gap-2">
+                <div class="flex items-center gap-2">
                     <i class="bi bi-check text-3xl"></i>
-                    <p class="text-md">Seamless Delivery</p>
+                    <p class="text-lg font-neusa-regular">Seamless Delivery</p>
                 </div>
-                <div class="flex items-center font-neusa-regular gap-2">
+                <div class="flex items-center gap-2">
                     <i class="bi bi-check text-3xl"></i>
-                    <p class="text-md">Transparent Commisions</p>
+                    <p class="text-lg font-neusa-regular">Transparent Commissions</p>
                 </div>
-                <div class="flex items-center font-neusa-regular gap-2">
+                <div class="flex items-center gap-2">
                     <i class="bi bi-check text-3xl"></i>
-                    <p class="text-md">Fair Pricing </p>
+                    <p class="text-lg font-neusa-regular">Fair Pricing </p>
                 </div>
             </div>
         </div>
 
         <!-- Hero Image -->
-        <div class="flex  lg:min-w-[500px] lg:max-w-[800px] place-content-center place-items-right">
+        <div class="flex h-full lg:min-w-[500px] lg:max-w-[800px] place-content-center place-items-right">
             <div class="rounded-[40px] overflow-clip shadow-xl border border-gray-300 lg:border-secondary border-8">
                 <img src="{% static './assets/images/stock/image-hero.jpg' %}" alt="dashboard" class="w-full h-full">
             </div>
@@ -90,7 +90,7 @@
 <section class="section-diagonal-top h-full w-full max-w-[100vw] flex flex-col overflow-hidden relative items-center justify-center p-[5%]" id="how-it-works-section">
 
     <!-- Title -->
-    <h1 class="select-none text-6xl mt-40 md:mt-80 font-mortend-bold text-white uppercase">How It Works</h1>
+    <h1 class="select-none text-6xl mt-40 md:mt-40 font-mortend-bold text-white uppercase">How It Works</h1>
     <h2 class="select-none text-xl md:text-2xl mt-5 font-neusa-regular text-white">
         Learn how FEAST works as the premier solution for the three-sided food delivery marketplace
     </h2>
@@ -101,14 +101,14 @@
         
         <div class="span-1 w-full">
             <div class="rounded-[40px] overflow-clip shadow-xl border border-gray-300 lg:border-secondary border-8">
-                <img src="{% static './assets/images/stock/du-feast-14.jpg' %}" alt="dashboard" class="w-full h-full">
+                <img id="main-step-image" src="{% static './assets/images/stock/du-feast-14.jpg' %}" alt="dashboard" class="w-full h-full">
             </div>
         </div>
 
         <!-- Step List -->
         <div class="flex flex-col span-1 gap-5" id="step-cards">
             <!-- Step 1 -->
-            <div data-step="1" class="step-card">
+            <div data-step="1" class="step-card active flex flex-col md:flex-row">
                 <div class="w-[50px] h-[50px] p-5 lg:p-8 text-white text-md md:text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-secondary">1</div>
                 <div class="flex flex-col">
                     <h3 class="text-xl md:text-3xl text-white font-neusa-bold">For Eaters and Customers</h3>
@@ -117,7 +117,7 @@
                 </div>
             </div>
             <!-- Step 2 -->
-            <div data-step="2" class="step-card">
+            <div data-step="2" class="step-card flex flex-col md:flex-row">
                 <div class="w-[50px] h-[50px] p-5 lg:p-8 text-white text-md md:text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-secondary">2</div>
                 <div class="flex flex-col">
                     <h3 class="text-xl md:text-3xl text-white font-neusa-bold">For Restaurants and Businesses</h3>
@@ -126,7 +126,7 @@
                 </div>
             </div>
             <!-- Step 3 -->
-            <div data-step="3" class="step-card">
+            <div data-step="3" class="step-card flex flex-col md:flex-row">
                 <div class="w-[50px] h-[50px] p-5 lg:p-8 text-white text-md md:text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-secondary">3</div>
                 <div class="flex flex-col">
                     <h3 class="text-xl md:text-3xl text-white font-neusa-bold">For Couriers and Delivery Drivers</h3>
@@ -142,11 +142,11 @@
     <div id="step-content" class="select-none grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mt-20">
         <div class="flex flex-col gap-5">
             <h2 class="text-3xl md:text-6xl font-mortend-bold text-white uppercase">Customer Delivery App</h2>
-            <p class="text-xl md:text-2xl font-neusa-regular text-white">
-                <strong class="font-neusa-bold">Delicious food, delivered fast, with full control</strong>. Our intuitive customer app makes ordering easy,
+            <p class="text-xl md:text-2xl font-neusa-light text-white">
+                <strong class="font-neusa-bold">Delicious food, delivered fast, with full control</strong>. <br>Our intuitive customer app makes ordering easy,
                 affordable, and transparent from start to finish.
             </p>
-            <a href="#" class="w-[180px] bg-secondary font-neusa-bold text-white text-xl px-8 py-4 m-2 hover:bg-primary transition-colors rounded-lg text-center">
+            <a href="#" class="w-[180px] bg-secondary font-neusa-bold text-white text-xl px-8 py-4 m-2 hover:bg-white hover:text-primary transition-colors rounded-lg text-center">
                 Get Started
             </a>
         </div>
@@ -155,6 +155,7 @@
         <div class="w-full h-full owl-carousel">
             <!-- Item 1 -->
             <div class="relative rounded-xl overflow-hidden h-[350px]">
+                <div class="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none z-0"></div>
                 <img src="{% static './assets/images/stock/du-feast-8.jpg' %}" class="h-full w-full object-cover" />
                 <div class="absolute bottom-0 w-full text-white p-8 text-start">
                     <h2 class="font-neusa-light">Live Order Tracking</h2>
@@ -164,28 +165,11 @@
 
             <!-- Item 2 -->
             <div class="relative rounded-xl overflow-hidden h-[350px]">
+                <div class="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none z-0"></div>
                 <img src="{% static './assets/images/stock/du-feast-13.jpg' %}" class="h-full w-full object-cover" />
                 <div class="absolute bottom-0 w-full text-white p-8 text-start">
                     <h2 class="font-neusa-light">Smart Reordering</h2>
                     <p class="font-neusa-normal text-lg">One-tap reorders of your go-to manuals when your crave them!</p>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="relative rounded-xl overflow-hidden h-[350px]">
-                <img src="{% static './assets/images/stock/du-feast-2.jpg' %}" class="h-full w-full object-cover" />
-                <div class="absolute bottom-0 w-full text-white p-8 text-start">
-                    <h2 class="font-neusa-light">Live Order Tracking</h2>
-                    <p class="font-neusa-normal text-lg">Follow your meal from kitchen to doorstep in real time!</p>
-                </div>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="relative rounded-xl overflow-hidden h-[350px]">
-                <img src="{% static './assets/images/stock/du-feast-3.jpg' %}" class="h-full w-full object-cover" />
-                <div class="absolute bottom-0 w-full text-white p-8 text-start">
-                    <h2 class="font-neusa-light">Live Order Tracking</h2>
-                    <p class="font-neusa-normal text-lg">Follow your meal from kitchen to doorstep in real time!</p>
                 </div>
             </div>
         </div>
@@ -195,7 +179,7 @@
 
 <!-- What's Next Section -->
 <section class="select-none diagonal-bottom flex flex-col w-full min-h-[100vh] max-w-[100vw] overflow-hidden relative bg-secondary" id="what-next-section">
-    <div class="flex flex-col p-5 md:p-10 gap-20 mb-40">
+    <div class="flex flex-col px-[5%] md:px-10 gap-20 mb-40">
         <!-- header -->
         <div class="flex flex-col">
             <!-- Title -->
@@ -206,30 +190,30 @@
         <!-- Step List -->
         <div class="flex flex-col md:flex-row gap-5">
             <!-- Step 1 -->
-            <div class="flex flex-col gap-5 p-5 md:p-10 border rounded-xl">
-                <div class="w-[50px] h-[50px] p-8 text-md text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white">1</div>
-                <div class="flex flex-col gap-5">
-                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold">For Eaters and Customers</h3>
-                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4">Enjoy local flavors, without the markup.</p>
-                    <p class="text-md md:text-lg text-white font-neusa-light">Browse your favorite spots, order seamlessly, and support local restaurants without the inflated delivery fees.</p>
+            <div class="group flex flex-col gap-5 p-5 md:p-10 border rounded-xl hover:bg-white transition-colors duration-300">
+                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-300">1</div>
+                <div class="flex flex-col">
+                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold text-white group-hover:text-secondary transition-colors duration-300">Restaurant Ownership Opportunities</h3>
+                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 text-white group-hover:text-secondary transition-colors duration-300">Empowering local partners with equity.</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light text-white group-hover:text-secondary transition-colors duration-300">We're building a model where restaurant partners become part-owners in the platform, sharing in profits and decision-making as the network grows. </p>
                 </div>
             </div>
             <!-- Step 2 -->
-            <div class="flex flex-col gap-5 p-5 md:p-10 border rounded-xl">
-                <div class="w-[50px] h-[50px] p-8 text-md text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white">2</div>
-                <div class="flex flex-col gap-5">
-                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold">For Restaurants and Businesses</h3>
-                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4">Grow sales without losing your margin.</p>
-                    <p class="text-md md:text-lg text-white font-neusa-light">Take back control with a fair, commission-friendly platform designed to boost orders, visibility, and revenue.</p>
+            <div class="group flex flex-col gap-5 p-5 md:p-10 border rounded-xl hover:bg-white transition-colors duration-300">
+                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-300">2</div>
+                <div class="flex flex-col">
+                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold text-white group-hover:text-secondary transition-colors duration-300">Early Backer Rewards</h3>
+                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 text-white group-hover:text-secondary transition-colors duration-300">Fueling our future, together.</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light text-white group-hover:text-secondary transition-colors duration-300">Founding investors and early supporters will receive exclusive perks, equity options, and lifetime benefits as part of our gratitude for helping us scale.</p>
                 </div>
             </div>
             <!-- Step 3 -->
-            <div class="flex flex-col gap-5 p-5 md:p-10 border rounded-xl">
-                <div class="w-[50px] h-[50px] p-8 text-md text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white">3</div>
-                <div class="flex flex-col gap-5">
-                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold">For Couriers and Delivery Drivers</h3>
-                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4">Earn more. Stress less.</p>
-                    <p class="text-md md:text-lg text-white font-neusa-light">Deliver on your terms with transparent pay, better routes, and a platform that puts drivers first.</p>
+            <div class="group flex flex-col gap-5 p-5 md:p-10 border rounded-xl hover:bg-white transition-colors duration-300">
+                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-300">3</div>
+                <div class="flex flex-col">
+                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold text-white group-hover:text-secondary transition-colors duration-300">Strategic Growth Funding</h3>
+                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 text-white group-hover:text-secondary transition-colors duration-300">Ready for the next big leap</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light text-white group-hover:text-secondary transition-colors duration-300">We're preparing for venture capital funding to accelerate expansion, develop new tech features, and bring equitable delivery to more cities across the country.</p>
                 </div>
             </div>
         </div>
@@ -241,15 +225,87 @@
     <div class="select-none flex flex-col p-5 md:p-10 text-center">
 
         <!-- Title -->
-        <h1 class="text-4xl md:text-6xl mt-40 font-mortend-bold uppercase">let´s feast toguether!  </h1>
+        <h1 class="text-4xl md:text-6xl mt-20 font-mortend-bold uppercase">let´s feast together!  </h1>
         <!-- Subtitle -->
-        <h2 class="flex flex-col text-xl md:text-2xl mt-5 font-neusa-normal text-gray-600 min-w-[500px] max-w-[850px] text-center mx-auto">Join our newsletter for upcomming information, news, ad updates on the FEAST project. Your support is much appreciated!</h2>
+        <h2 class="flex flex-col text-xl md:text-2xl mt-5 font-neusa-normal text-gray-600 min-w-[500px] max-w-[850px] text-center mx-auto">Join our newsletter for upcomming information, news, and updates on the FEAST project. Your support is much appreciated!</h2>
     </div>
     <div class="flex flex-col p-5 text-center items-center mx-auto w-full md:w-[50%]">
-        <!-- Form -->
-        <form name="email-form" method="get" class="flex rounded-lg overflow-hidden border border-gray-300 w-full mt-20 md:mt-40">
-            <input type="text" placeholder="Enter your email" class="flex-1 px-4 py-2 focus:outline-none font-neusa-light lg:text-xl w-full focus:outline-none" />
-            <input type="submit" value="Get Started" class="bg-primary font-neusa-bold font-bold text-white text-xl px-8 py-4 m-2 ml-auto hover:bg-secondary transition-colors rounded-lg"/>
+        <form
+            method="POST"
+            action="{% url 'contact-us' %}"
+            onsubmit="return onSubmit(event)"
+            class="flex flex-col gap-6 rounded-lg overflow-hidden border border-gray-300 w-full p-6 md:p-10 bg-white shadow-lg"
+            >
+            {% if errors %}
+                <div class="text-red-600 font-semibold">{{ errors }}</div>
+            {% endif %}
+            {% csrf_token %}
+
+            <!-- Nombre -->
+            <div class="flex flex-col gap-1">
+                <input
+                type="text"
+                class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none font-neusa-light text-lg w-full"
+                name="name"
+                maxlength="30"
+                required
+                value="{{ data.name }}"
+                placeholder="Your Name"
+                />
+            </div>
+
+            <!-- Teléfono -->
+            <div class="flex flex-col gap-1">
+                <div class="flex gap-2">
+                <select
+                    name="country-codes"
+                    id="country-codes"
+                    class="px-4 py-3 border border-gray-300 rounded-lg font-neusa-light text-lg w-[30%]"
+                ></select>
+                <input
+                    type="text"
+                    class="px-4 py-3 border border-gray-300 rounded-lg font-neusa-light text-lg w-full"
+                    maxlength="15"
+                    required
+                    value="{{ data.phone|phone_number }}"
+                    name="phone-number"
+                    placeholder="Your Phone Number"
+                />
+                <input type="hidden" name="phone" value="{{ data.phone }}" />
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex flex-col gap-1">
+                <input
+                type="email"
+                class="px-4 py-3 border border-gray-300 rounded-lg font-neusa-light text-lg w-full"
+                required
+                name="email"
+                maxlength="250"
+                placeholder="Your Email"
+                value="{{ data.email }}"
+                />
+            </div>
+
+            <!-- Mensaje -->
+            <div class="flex flex-col gap-1">
+                <textarea
+                class="px-4 py-3 border border-gray-300 rounded-lg font-neusa-light text-lg w-full resize-y max-h-[250px] min-h-[100px]"
+                name="description"
+                maxlength="1200"
+                required
+                placeholder="Your Message"
+                >{{ data.description }}</textarea>
+            </div>
+
+            <!-- Botón -->
+            <button
+                type="submit"
+                class="bg-primary text-white font-neusa-bold text-xl px-8 py-4 mt-4 hover:bg-secondary transition-colors rounded-lg self-end flex items-center gap-2"
+            >
+                <span>Contact Us</span>
+            </button>
         </form>
     </div>
 </section>
@@ -261,123 +317,21 @@
 
 
     <script src="{% static "./js/home.js" %}"></script>
+    
+    <script src="{% static "./js/inquiry/inquiry.js" %}"></script>
 
     <script>
         const staticBase = "{% static 'assets/images/stock/' %}";
-        console.log(staticBase)
     </script>
-    <script>
-        const steps = document.querySelectorAll('.step-card');
-        const content = document.getElementById('step-content');
-
-        const stepData = {
-            1: {
-                title: 'Customer Delivery App',
-                subtitle: 'Enjoy local flavors, without the markup.',
-                text: `Our intuitive customer app makes ordering easy, affordable, and transparent from start to finish.`,
-                images: [
-                    {img: 'du-feast-8.jpg',title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!'},
-                    {img: 'du-feast-13.jpg',title: 'Smart Reordering', subtitle: 'Follow your meal from kitchen to doorstep in real time!'},
-                    {img: 'du-feast-2.jpg',title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!'},
-                    {img: 'du-feast-3.jpg',title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!'}
-                ]
-            },
-            2: {
-                title: 'Customer Delivery App',
-                subtitle: 'Enjoy local flavors, without the markup.',                
-                text: `Our intuitive customer app makes ordering easy, affordable, and transparent from start to finish.`,
-
-                images: [
-                    {img: 'du-feast-3.jpg',title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!'},
-                    {img: 'du-feast-4.jpg',title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!'},
-                    {img: 'du-feast-5.jpg',title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!'},
-                    {img: 'du-feast-11.jpg',title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!'}
-                ]
-            },
-            3: {
-                title: 'Courier App',
-                subtitle: 'Enjoy local flavors, without the markup.',                
-                text: `Our intuitive customer app makes ordering easy, affordable, and transparent from start to finish.`,
-                images: [
-                    {img: 'du-feast-6.jpg',title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!'},
-                    {img: 'du-feast-7.jpg',title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!'},
-                    {img: 'du-feast-9.jpg',title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!'},
-                    {img: 'du-feast-10.jpg',title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!'}
-                ]
-            }
-        };
-
-        steps.forEach(card => {
-            card.addEventListener('click', () => {
-                steps.forEach(c => c.classList.remove('active'));
-                card.classList.add('active');
-
-                const step = card.getAttribute('data-step');
-                const data = stepData[step];
-
-                // 1. Seleccionás el div original
-                const originalDiv = document.getElementById('step-content');
-
-                // 2. Creás el nuevo div
-                const newDiv = document.createElement('div');
-                newDiv.id = 'step-content';
-
-                newDiv.innerHTML = `
-                <div id="step-content" class="select-none grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mt-20">
-                    <div class="flex flex-col gap-5">
-                        <h2 class="text-3xl md:text-6xl font-mortend-bold text-white uppercase">${data.title}</h2>
-                        <p class="text-xl md:text-2xl font-neusa-regular text-white">
-                            <strong class="font-neusa-bold">${data.subtitle}</strong>. ${data.text}
-                        </p>
-                        <a href="#" class="w-[180px] bg-secondary font-neusa-bold text-white text-xl px-8 py-4 m-2 hover:bg-primary transition-colors rounded-lg text-center">
-                            Get Started
-                        </a>
-                    </div>
-
-                    <!-- Carousel -->
-                    <div class="w-full h-full owl-carousel">
-                        <!-- Item 1 -->
-                        ${data.images.map(img => `
-                        <div class="relative rounded-xl overflow-hidden h-[350px]">
-                            <img src="${staticBase}${img.img}" class="h-full w-full object-cover" />
-                            <div class="absolute bottom-0 w-full text-white p-8 text-start">
-                                <h2 class="font-neusa-light">${img.title}</h2>
-                                <p class="font-neusa-normal text-lg">${img.subtitle}</p>
-                            </div>
-                        </div>
-                        `).join('')}  
-
-                    </div>
-                </div>
-                `;
-                originalDiv.replaceWith(newDiv);
-
-                $(document).ready(function () {
-                    $('.owl-carousel').owlCarousel({
-                        loop: true,
-                        margin: 10,
-                        nav: true,
-        
-        
-                        responsive: {
-                            0: { items: 1 },
-                            500: { items: 2 },
-                            700: { items: 3 },
-                            1000: { items: 1 },
-                            1300: { items: 2 },
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-    <!-- jQuery (requerido por Owl Carousel) -->
+    
+    <script src="{% static "./js/carousel.js" %}"></script>
+    <!-- jQuery (required for Owl Carousel) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <!-- Inicialización -->
+    <!-- Inicialize Owl Carousel -->
     <script>
         $(document).ready(function () {
             $('.owl-carousel').owlCarousel({
