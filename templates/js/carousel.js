@@ -40,88 +40,12 @@ const stepData = {
     }
 };
 
-steps.forEach(card => {
-    card.addEventListener('click', () => {
-        steps.forEach(c => c.classList.remove('active'));
-        // Ejecutar por defecto el primer paso al cargar la página
-        document.addEventListener('DOMContentLoaded', () => {
-            const defaultStep = document.querySelector('.step-card[data-step="1"]');
-            if (defaultStep) defaultStep.click();
-        });
-        card.classList.add('active');
-
-        const step = card.getAttribute('data-step');
-        const data = stepData[step];
-
-        // 1. Seleccionás el div original
-        const originalDiv = document.getElementById('step-content');
-
-        // 2. Creás el nuevo div
-        const newDiv = document.createElement('div');
-        newDiv.id = 'step-content';
-
-        newDiv.innerHTML = `
-                <div id="step-content" class="select-none grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mt-20">
-                    <div class="flex flex-col gap-5">
-                        <h2 class="text-3xl md:text-6xl font-mortend-bold text-white uppercase">${data.title}</h2>
-                        <p class="text-xl md:text-2xl font-neusa-light text-white">
-                            <strong class="font-neusa-bold">${data.subtitle}</strong>.<br>${data.text}
-                        </p>
-                        <a href="#" class="w-[180px] bg-secondary font-neusa-bold text-white text-xl px-8 py-4 m-2 hover:bg-white hover:text-primary transition-colors rounded-lg text-center">
-                            Get Started
-                        </a>
-                    </div>
-
-                    <!-- Carousel -->
-                    <div class="w-full h-full owl-carousel">
-                        <!-- Item 1 -->
-                        ${data.images.map(img => `
-                        <div class="relative rounded-xl overflow-hidden h-[350px]">
-                            <div class="absolute bottom-0 w-full h-full bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none z-0"></div>
-                            <img src="${staticBase}${img.img}" class="h-full w-full object-cover" />
-                            <div class="absolute bottom-0 w-full text-white p-8 text-start">
-                                <h2 class="font-neusa-light">${img.title}</h2>
-                                <p class="font-neusa-normal text-lg">${img.subtitle}</p>
-                            </div>
-                        </div>
-                        `).join('')}  
-
-                    </div>
-                </div>
-                `;
-        originalDiv.replaceWith(newDiv);
-
-        // Cambiar la imagen principal
-        const mainImage = document.getElementById('main-step-image');
-        mainImage.src = staticBase + data.mainImage;
-
-
-        $(document).ready(function () {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-
-
-                responsive: {
-                    0: { items: 1 },
-                    500: { items: 2 },
-                    700: { items: 3 },
-                    1000: { items: 1 },
-                    1300: { items: 2 },
-                }
-            });
-        });
-    });
-});
-
-$(document).ready(function () {
+// Function to initialize Owl Carousel
+function initializeCarousel() {
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 10,
         nav: true,
-
-
         responsive: {
             0: { items: 1 },
             500: { items: 2 },
@@ -130,4 +54,58 @@ $(document).ready(function () {
             1300: { items: 2 },
         }
     });
+}
+// Click handling at each step
+steps.forEach(card => {
+    card.addEventListener('click', () => {
+        steps.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+
+        const step = card.getAttribute('data-step');
+        const data = stepData[step];
+
+        const originalDiv = document.getElementById('step-content');
+
+        const newDiv = document.createElement('div');
+        newDiv.id = 'step-content';
+
+        newDiv.innerHTML = `
+            <div class="select-none grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mt-20">
+                <div class="flex flex-col gap-5">
+                    <h2 class="text-3xl md:text-6xl font-mortend-bold text-white uppercase">${data.title}</h2>
+                    <p class="text-xl md:text-2xl font-neusa-light text-white">
+                        <strong class="font-neusa-bold">${data.subtitle}</strong>.<br>${data.text}
+                    </p>
+                    <a href="#" class="w-[180px] bg-secondary font-neusa-bold text-white text-xl px-8 py-4 m-2 hover:bg-white hover:text-primary transition-colors rounded-lg text-center">
+                        Get Started
+                    </a>
+                </div>
+
+                <div class="w-full h-full owl-carousel">
+                    ${data.images.map(img => `
+                        <div class="relative rounded-xl overflow-hidden h-[350px]">
+                            <div class="absolute bottom-0 w-full h-full bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none z-0"></div>
+                            <img src="${staticBase}${img.img}" class="h-full w-full object-cover" />
+                            <div class="absolute bottom-0 w-full text-white p-8 text-start">
+                                <h2 class="font-neusa-light">${img.title}</h2>
+                                <p class="font-neusa-normal text-lg">${img.subtitle}</p>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+
+        originalDiv.replaceWith(newDiv);
+        initializeCarousel(); // 🧩 Inicializar el nuevo carrusel
+        document.getElementById('main-step-image').src = staticBase + data.mainImage;
+    });
+});
+
+// Run step 1 by default
+document.addEventListener('DOMContentLoaded', () => {
+    const defaultStep = document.querySelector('.step-card[data-step="1"]');
+    if (defaultStep) {
+        defaultStep.click();
+    }
 });

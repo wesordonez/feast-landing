@@ -260,7 +260,7 @@
                 <select
                     name="country-codes"
                     id="country-codes"
-                    class="px-4 py-3 border border-gray-300 rounded-lg font-neusa-light text-lg w-[30%]"
+                    class="rounded-lg font-neusa-bold text-lg w-[30%] input"
                 ></select>
                 <input
                     type="text"
@@ -312,43 +312,26 @@
 {% endblock content %}
 
 {% block scripts %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- jQuery (required by Owl Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script src="{% static "./js/home.js" %}"></script>
-    
-    <script src="{% static "./js/inquiry/inquiry.js" %}"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+    <!-- App Scripts -->
+    <script src="{% static './js/home.js' %}"></script>
+    <script src="{% static './js/inquiry/inquiry.js' %}"></script>
+
+    <!-- Base path for dynamic image loading -->
     <script>
         const staticBase = "{% static 'assets/images/stock/' %}";
     </script>
-    
-    <script src="{% static "./js/carousel.js" %}"></script>
-    <!-- jQuery (required for Owl Carousel) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!-- Inicialize Owl Carousel -->
-    <script>
-        $(document).ready(function () {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-
-
-                responsive: {
-                    0: { items: 1 },
-                    500: { items: 2 },
-                    700: { items: 3 },
-                    1000: { items: 1 },
-                    1300: { items: 2 },
-                }
-            });
-        });
-    </script>
+    <!-- Carousel logic (Owl init is handled inside this file dynamically) -->
+    <script src="{% static './js/carousel.js' %}"></script>
     
 {% endblock scripts %}
