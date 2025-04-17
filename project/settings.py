@@ -109,7 +109,7 @@ INSTALLED_APPS = [
     #first party
     'user',
     'blog',
-    'inquiry',
+    'contact',
 ]
 
 

@@ -36,7 +36,7 @@ urlpatterns = [
     
     path('user/', include('user.urls')),
     path('blog/', include('blog.urls')),
-    path('contact-us/', include('inquiry.urls')),
+    path('contact-us/', include('contact.urls')),
     
 
     path('sitemap.xml', sitemap, sitemap_dict, name='django.contrib.sitemaps.views.sitemap'),

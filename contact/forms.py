@@ -1,11 +1,11 @@
 from django.forms import ModelForm
 
-from .models import Inquiry
+from .models import Contact
 
 
-class InquiryForm(ModelForm):
+class ContactForm(ModelForm):
 
     class Meta:
 
-        model = Inquiry
+        model = Contact
         fields = '__all__'
