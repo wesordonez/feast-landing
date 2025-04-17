@@ -4,36 +4,6 @@
 {% load custom_tags %}
 
 {% block content %}
-<!-- Styles for owl carousel navigation buttons -->
-<style>
-    .owl-nav {
-        position: flex;
-        margin-top: 20px;
-    }
-
-    .owl-nav button {
-        margin: 0 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .owl-nav button span:hover {
-        color: #A57E2C;
-        background-color: white;
-    }
-
-    .owl-nav button span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        background: #A57E2C;
-        color: white;
-        border-radius: 9999px;
-        font-size: 25px;
-        text-align: center;
-    }
-</style>
 
 <!-- Hero section -->
 <section class="select-none flex flex-col w-full min-h-[100vh] max-w-[100vw] overflow-hidden relative" id="hero-section">
@@ -41,7 +11,7 @@
     <div class="md:grid-cols-2 flex flex-col lg:flex-row w-full h-full px-[5%] place-content-center min-h-[100vh] justify-around place-items-center gap-[40px] lg:max-gap-[110px]">
 
         <div class="flex flex-col place-content-center w-full h-full lg:min-w-[500px] lg:max-w-[600px]">
-            <img src="{% static './assets/logos/logo-hero.png' %}" alt="dashboard" class="w-[20%] h-[20%] mt-[80px]">
+            <img src="{% static './assets/logos/du-feast-logo.png' %}" alt="Feast logo" class="w-[20%] h-[20%] mt-[80px]">
 
             <!-- Hero Title -->
             <h1 class="text-2xl md:text-[40px] font-mortend-bold uppercase md:leading-[50px] mt-[40px]">
@@ -77,7 +47,7 @@
 
         <!-- Hero Image -->
         <div class="flex h-full lg:min-w-[500px] lg:max-w-[800px] place-content-center place-items-right">
-            <div class="rounded-[40px] overflow-clip shadow-xl border border-gray-300 lg:border-secondary border-8">
+            <div class="rounded-[40px] overflow-clip shadow-xl">
                 <img src="{% static './assets/images/stock/image-hero.jpg' %}" alt="dashboard" class="w-full h-full">
             </div>
         </div>
@@ -100,8 +70,8 @@
         <!-- Image -->
         
         <div class="span-1 w-full">
-            <div class="rounded-[40px] overflow-clip shadow-xl border border-gray-300 lg:border-secondary border-8">
-                <img id="main-step-image" src="{% static './assets/images/stock/du-feast-14.jpg' %}" alt="dashboard" class="w-full h-full">
+            <div class="rounded-[40px] overflow-clip shadow-xl">
+                <img id="main-step-image" src="{% static './assets/images/stock/du-feast-customers.jpg' %}" alt="For eaters and customers" class="w-full h-full">
             </div>
         </div>
 
@@ -191,29 +161,29 @@
         <div class="flex flex-col md:flex-row gap-5">
             <!-- Step 1 -->
             <div class="group flex flex-col gap-5 p-5 md:p-10 border rounded-xl hover:bg-white transition-colors duration-300">
-                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-300">1</div>
+                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white group-hover:bg-secondary group-hover:text-white transition-colors duration-300">1</div>
                 <div class="flex flex-col">
-                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold text-white group-hover:text-secondary transition-colors duration-300">Restaurant Ownership Opportunities</h3>
-                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 text-white group-hover:text-secondary transition-colors duration-300">Empowering local partners with equity.</p>
-                    <p class="text-md md:text-lg text-white font-neusa-light text-white group-hover:text-secondary transition-colors duration-300">We're building a model where restaurant partners become part-owners in the platform, sharing in profits and decision-making as the network grows. </p>
+                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold group-hover:text-secondary transition-colors duration-300">Restaurant Ownership Opportunities</h3>
+                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 group-hover:text-secondary transition-colors duration-300">Empowering local partners with equity.</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light group-hover:text-secondary transition-colors duration-300">We're building a model where restaurant partners become part-owners in the platform, sharing in profits and decision-making as the network grows. </p>
                 </div>
             </div>
             <!-- Step 2 -->
             <div class="group flex flex-col gap-5 p-5 md:p-10 border rounded-xl hover:bg-white transition-colors duration-300">
-                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-300">2</div>
+                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white group-hover:bg-secondary group-hover:text-white transition-colors duration-300">2</div>
                 <div class="flex flex-col">
-                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold text-white group-hover:text-secondary transition-colors duration-300">Early Backer Rewards</h3>
-                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 text-white group-hover:text-secondary transition-colors duration-300">Fueling our future, together.</p>
-                    <p class="text-md md:text-lg text-white font-neusa-light text-white group-hover:text-secondary transition-colors duration-300">Founding investors and early supporters will receive exclusive perks, equity options, and lifetime benefits as part of our gratitude for helping us scale.</p>
+                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold group-hover:text-secondary transition-colors duration-300">Early Backer Rewards</h3>
+                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 group-hover:text-secondary transition-colors duration-300">Fueling our future, together.</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light  group-hover:text-secondary transition-colors duration-300">Founding investors and early supporters will receive exclusive perks, equity options, and lifetime benefits as part of our gratitude for helping us scale.</p>
                 </div>
             </div>
             <!-- Step 3 -->
             <div class="group flex flex-col gap-5 p-5 md:p-10 border rounded-xl hover:bg-white transition-colors duration-300">
-                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-300">3</div>
+                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white group-hover:bg-secondary group-hover:text-white transition-colors duration-300">3</div>
                 <div class="flex flex-col">
-                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold text-white group-hover:text-secondary transition-colors duration-300">Strategic Growth Funding</h3>
-                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 text-white group-hover:text-secondary transition-colors duration-300">Ready for the next big leap</p>
-                    <p class="text-md md:text-lg text-white font-neusa-light text-white group-hover:text-secondary transition-colors duration-300">We're preparing for venture capital funding to accelerate expansion, develop new tech features, and bring equitable delivery to more cities across the country.</p>
+                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold group-hover:text-secondary transition-colors duration-300">Strategic Growth Funding</h3>
+                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 group-hover:text-secondary transition-colors duration-300">Ready for the next big leap</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light group-hover:text-secondary transition-colors duration-300">We're preparing for venture capital funding to accelerate expansion, develop new tech features, and bring equitable delivery to more cities across the country.</p>
                 </div>
             </div>
         </div>

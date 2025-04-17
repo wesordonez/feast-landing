@@ -9,33 +9,33 @@ const stepData = {
         subtitle: 'Delicious food, delivered fast, with full control',
         text: `Our intuitive customer app makes ordering easy,
                 affordable, and transparent from start to finish.`,
-        mainImage: 'du-feast-14.jpg',
+        mainImage: {image: 'du-feast-customers.jpg', alt: 'For eaters and customers'},
         images: [
-            { img: 'du-feast-8.jpg', title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!' },
-            { img: 'du-feast-13.jpg', title: 'Smart Reordering', subtitle: 'One-tap reorders of your go-to meals, just when you crave them!' },
-            { img: 'du-feast-6.jpg', title: 'No Hidden Fees', subtitle: `Know exactly whgat tour's e paying with upfront, transparent pricing` },
+            { img: 'du-feast-customers-01.jpg', title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!' },
+            { img: 'du-feast-customers-02.jpg', title: 'Smart Reordering', subtitle: 'One-tap reorders of your go-to meals, just when you crave them!' },
+            { img: 'du-feast-customers-03.jpg', title: 'No Hidden Fees', subtitle: `Know exactly whgat tour's e paying with upfront, transparent pricing` },
         ]
     },
     2: {
         title: 'Restaurant App',
         subtitle: 'Tools that empower local businesses to grow and streamline',
         text: `Restaurants get a full suite of tools to manage orders, engoge with customers, and track performance`,
-        mainImage: 'du-feast-2.jpg',
+        mainImage: {image: 'du-feast-restaurants.jpg', alt: 'For restaurants'},
         images: [
-            { img: 'du-feast-10.jpg', title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!' },
-            { img: 'du-feast-4.jpg', title: 'Menu & Promo Control', subtitle: 'Update menus and run promotions needing outside help' },
-            { img: 'du-feast-3.jpg', title: 'Sales and Innsight Dashboard', subtitle: 'Get actionalble reports on slaes trends, peak hours, and coustomer preferences' },
+            { img: 'du-feast-restaurant-01.jpg', title: 'Live Order Tracking', subtitle: 'Follow your meal from kitchen to doorstep in real time!' },
+            { img: 'du-feast-restaurant-02.jpg', title: 'Menu & Promo Control', subtitle: 'Update menus and run promotions needing outside help' },
+            { img: 'du-feast-restaurant-03.jpg', title: 'Sales and Innsight Dashboard', subtitle: 'Get actionalble reports on slaes trends, peak hours, and coustomer preferences' },
         ]
     },
     3: {
         title: 'Courier And Driver App',
         subtitle: 'Built for speed, efficiency, and fairness',
         text: `Our driver app helps you earn more with optimized routes and full transparency every step of the way.`,
-        mainImage: 'du-feast-1.jpg',
+        mainImage: {image: 'du-feast-delivery.jpg', alt: 'For delivery'},
         images: [
-            { img: 'du-feast-9.jpg', title: 'Route Optimization', subtitle: 'Save time(and fuel) with smart delivery routes' },
-            { img: 'du-feast-11.jpg', title: 'Instant Payouts', subtitle: 'Get paid quickly with no hidden commissions' },
-            { img: 'du-feast-5.jpg', title: 'Earnings Breakdown', subtitle: 'Clear breakdowns of your tips, bonosues, and delivery pay in one tap' },
+            { img: 'du-feast-delivery-01.jpg', title: 'Route Optimization', subtitle: 'Save time(and fuel) with smart delivery routes' },
+            { img: 'du-feast-delivery-02.jpg', title: 'Instant Payouts', subtitle: 'Get paid quickly with no hidden commissions' },
+            { img: 'du-feast-delivery-03.jpg', title: 'Earnings Breakdown', subtitle: 'Clear breakdowns of your tips, bonosues, and delivery pay in one tap' },
         ]
     }
 };
@@ -85,7 +85,7 @@ steps.forEach(card => {
                     ${data.images.map(img => `
                         <div class="relative rounded-xl overflow-hidden h-[350px]">
                             <div class="absolute bottom-0 w-full h-full bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none z-0"></div>
-                            <img src="${staticBase}${img.img}" class="h-full w-full object-cover" />
+                            <img src="${staticBase}${img.img}" alt="${img.title}" class="h-full w-full object-cover" />
                             <div class="absolute bottom-0 w-full text-white p-8 text-start">
                                 <h2 class="font-neusa-light">${img.title}</h2>
                                 <p class="font-neusa-normal text-lg">${img.subtitle}</p>
@@ -98,7 +98,11 @@ steps.forEach(card => {
 
         originalDiv.replaceWith(newDiv);
         initializeCarousel(); // 🧩 Inicializar el nuevo carrusel
-        document.getElementById('main-step-image').src = staticBase + data.mainImage;
+        const mainImage = document.getElementById('main-step-image');
+        if (mainImage) {
+            mainImage.src = staticBase + data.mainImage.image;
+            mainImage.alt = data.mainImage.alt;
+        }
     });
 });
 
