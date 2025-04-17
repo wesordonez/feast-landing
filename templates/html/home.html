@@ -5,310 +5,303 @@
 
 {% block content %}
 
-    <section class="w-full min-h-[100vh]  max-w-[100vw]
-                        flex flex-col overflow-hidden relative"
-                        id="hero-section"
-                        >
-            
-            <div class="w-full h-full p-[5%]
-                        place-content-center min-h-[100vh]
-                        justify-around place-items-center
-                        flex max-lg:flex-col">
+<!-- Hero section -->
+<section class="select-none flex flex-col w-full min-h-[100vh] max-w-[100vw] overflow-hidden relative" id="hero-section">
 
-                <div class="flex flex-col place-content-center max-w-[650px] min-w-[550px] 
-                            max-md:min-w-[300px]">
-                    <h1 class="text-6xl font-semibold uppercase 
-                            leading-normal max-md:text-5xl max-md:leading-[70px]">
-                        Supercharge your Django 
-                        apps with Templates 🚀
-                    </h1>
-                    <div class="mt-5 p-2 text-justify max-md:max-w-full">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi consequuntur provident, aperiam blanditiis quia quae fugit commodi aliquam fugiat earum repellendus impedit ex perspiciatis iste a, sint possimus cupiditate odio? Delectus, recusandae! Iure porro illum sint labore, expedita inventore sapiente fugit, consectetur totam nemo temporibus sunt eligendi, odio esse!
-                    </div>
-                    
-                    <a href="https://github.com/PaulleDemon/Django-website-template" 
-                                        class="btn mt-5 ml-auto 
-                                                duration-[0.3s]
-                                                transition-transform
-                                                hover:translate-x-2
-                                                ">
-                        <span>Get started</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
+    <div class="md:grid-cols-2 flex flex-col lg:flex-row w-full h-full px-[5%] place-content-center min-h-[100vh] justify-around place-items-center gap-[40px] lg:max-gap-[110px]">
 
-                <div class="max-w-[750px] 
-                            place-content-center
-                            place-items-center
-                            tw max-md:!mt-10">
-                    <div class="rounded-lg overflow-clip shadow-xl ">
-                        <img src="{% static './assets/images/home/dashboard.png' %}" 
-                                alt="dashboard" class="w-full h-full">
-                    </div>
-                    <div class="mt-5 p-2 text-justify text-2xl">
-                        Code Less. Deliver More
-                    </div>
-                </div>
+        <div class="flex flex-col place-content-center w-full h-full lg:min-w-[500px] lg:max-w-[600px]">
+            <img src="{% static './assets/logos/du-feast-logo.png' %}" alt="Feast logo" class="w-[20%] h-[20%] mt-[80px]">
 
-            </div>
-        
-    </section>
+            <!-- Hero Title -->
+            <h1 class="text-2xl md:text-[40px] font-mortend-bold uppercase md:leading-[50px] mt-[40px]">
+                the <br> restaurant <br> delivery <br> marketplace <br> without the crippling <br> fees.
+            </h1>
 
+            <!-- Hero Subtitle -->
+            <h2 class="font-neusa-regular text-xl mt-[20px] mb-[40px] p-2 max-md:max-w-full text-gray-600">
+                FEAST empowers restaurants, couriers, and customers--no more third-party squeeze.
+            </h2>
 
-    <section class="w-full  max-w-[100vw]
-                    flex flex-col overflow-hidden relative 
-                    place-items-center
-                    place-content-center
-                    p-6
-                    "
-                    >
-
-        <h2 class="text-5xl max-md:text-3xl">Features made for perfect delivery</h2>
-
-        <div class="flex max-lg:flex-col w-full gap-8 
-                    place-content-center mt-10 p-4
-                    place-items-center
-                    ">
-
-            <div class="w-[250px] h-[250px] 
-                        flex flex-col shadow-xl
-                        rounded-lg
-                        place-content-center place-items-center
-                        ">
-                <i class="bi bi-cloud-upload-fill 
-                            text-[#2c2a2a]
-                            text-6xl"></i>
-                <h3 class="text-xl mt-5">Production ready</h2>
-            </div>   
-            <div class="w-[250px] h-[250px] 
-                        flex flex-col shadow-xl
-                        rounded-lg
-                        place-content-center place-items-center
-                        ">
-                <i class="bi bi-phone-fill 
-                        text-[#2c2a2a]
-                            text-6xl"></i>
-                <h3 class="text-xl text-center mt-5">Responsive UI</h2>
-            </div>  
-            <div class="w-[250px] h-[250px] 
-                        flex flex-col shadow-xl
-                        rounded-lg
-                        place-content-center place-items-center
-                        ">
-                <i class="bi bi-database-fill 
-                        text-[#2c2a2a]
-                            text-6xl"></i>
-                <h3 class="text-xl text-center mt-5">
-                    Postgres / Sqlite <br> Database
-                </h2>
-            </div>    
-
-            <div class="w-[250px] h-[250px] 
-                        flex flex-col shadow-xl
-                        rounded-lg
-                        place-content-center place-items-center
-                        ">
-                <i class="bi bi-google
-                        text-[#2c2a2a]
-                            text-6xl"></i>
-                <h3 class="text-xl text-center mt-5">SEO optimization</h2>
-            </div>   
-
-        </div>
-
-    </section>
-
-    <section class="w-full flex 
-                    place-content-center 
-                    px-[10%]
-                    p-4
-                    gap-[10%]
-                    place-items-center
-                    max-md:flex-col
-                    overflow-hidden
-                    "
-                    >
-        <div class="flex flex-col place-items-center gap-2">
-            <h3 class="text-4xl max-md:text-3xl">Make it yours</h3>
-            <a class="btn mt-4 rounded-xl hover:scale-[1.05] duration-[0.3s]"
-                href="https://github.com/PaulleDemon/Django-website-template"
-            >
-                Get now!
+            <!-- Button -->
+            <a href="#cta-section" class="bg-secondary font-neusa-bold font-bold text-center text-white text-xl px-8 py-4 m-2 hover:bg-primary transition-colors rounded-lg">
+                Contact Us
             </a>
-        </div>
-    </section>
 
-    <section class="mt-5 w-full flex flex-col p-[5%]
-                     place-items-center">
-
-        <h2 class="text-3xl max-md:text-xl primary-text-color font-medium">
-            What some of our clients say
-        </h2>
-        
-        <div class="mt-[5%] flex w-full place-content-center gap-[5%]">
-
-            <div class="review-container flex flex-col">
-                <div class="flex h-[150px] max-w-[550px]">
-                    <div class="slides fade text-lg max-md:text-base text-justify">
-                        <q class="italic text-gray-600">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, culpa?
-                        </q>
-                        <div class="mt-2 text-yellow-400">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                        <p class="mt-3">- Trich B</p>
-                    </div>
-                
-                    <div class="slides fade text-lg max-md:text-base text-justify">
-                        <q class="italic text-gray-600 ">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet aspernatur optio deleniti soluta atque esse explicabo suscipit totam repudiandae voluptate.
-                        </q>
-                        <div class="mt-2 text-yellow-400">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                        <p class="mt-3">- Bára Müllerová</p>
-                    </div>
-
-                    <div class="slides fade text-lg max-md:text-base text-justify">
-                        
-                        <q class="italic text-gray-600 ">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ad.
-                        </q>
-                        <div class="mt-2 text-yellow-400">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                        <p class="mt-3">- Matt freeman</p>
-
-                    </div>
+            <!-- Hero Info -->
+            <div class="flex flex-wrap gap-2 mt-[40px] justify-between w-full">
+                <div class="flex items-center gap-2">
+                    <i class="bi bi-check text-3xl"></i>
+                    <p class="text-lg font-neusa-regular">Seamless Delivery</p>
                 </div>
-              
-                <!-- Navigation dots -->
-                <div class="dots-container mt-auto">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                <div class="flex items-center gap-2">
+                    <i class="bi bi-check text-3xl"></i>
+                    <p class="text-lg font-neusa-regular">Transparent Commissions</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="bi bi-check text-3xl"></i>
+                    <p class="text-lg font-neusa-regular">Fair Pricing </p>
                 </div>
             </div>
         </div>
 
-    
-       
-    </section>
-
-    <section class="w-full flex 
-                    flex-col
-                    place-content-center 
-                    px-[10%]
-                   
-                    gap-[10%]
-                    place-items-center
-                    ">
-
-        <div class="w-full place-content-center 
-                    flex flex-col gap-3
-                    place-items-center
-                    ">
-
-            <h2 class="text-3xl max-md:text-2xl primary-text-color">Special Newsletter signup</h2>
-            <h2 class="text-xl max-md:text-lg">Get to know about our future templates</h2>
-            
-            {% comment %} {% include "html/newsletter/form.html" %} {% endcomment %}
-
-            <div class="input flex h-[50px]  p-2 
-                            overflow-hidden place-items-center ">
-                            
-                <input type="email" class="w-full h-full bg-transparent outline-none px-3"
-                        placeholder="email"
-                        name="email"
-                        required
-                    >
-                
-                <button class="btn h-[35px] 
-                            
-                            duration-[0.3s]
-                            transition-colors
-                            " 
-                            type="submit"
-                            >
-                    Signup
-                </button>   
+        <!-- Hero Image -->
+        <div class="flex h-full lg:min-w-[500px] lg:max-w-[800px] place-content-center place-items-right">
+            <div class="rounded-[40px] overflow-clip shadow-xl">
+                <img src="{% static './assets/images/stock/image-hero.jpg' %}" alt="dashboard" class="w-full h-full">
             </div>
         </div>
 
-    </section>
-
-    <div class="fixed
-                top-[50%] translate-y-[-50%]
-                left-[50%] translate-x-[-50%]
-                w-[450px] max-h-[450px] 
-                max-md:w-[350px]
-                z-40
-                p-3
-                hidden
-                flex 
-                flex-col
-                rounded-md
-                shadow-2xl
-                bg-white"
-                id="modal"
-                >
-        {% comment %} feedback modal {% endcomment %}
-        <div class="w-full relative h-[40px]">
-            <button class="text-4xl 
-                            bi bi-x
-                            absolute
-                            right-2
-                            "
-                    id="modal-close"
-                            >
-        </div>
-        </button>
-        <h2 class="text-2xl text-center mt-[5%]" 
-                id="modal-title"></h2>
-
-        <div class="text-base font-normal mt-2" 
-                id="modal-description">
-        </div>
-
-        <textarea id="modal-input" 
-                placeholder="write..."
-                maxlength="2000"
-                class="input w-full 
-                        hidden
-                        mt-2
-                        resize-y 
-                        text-base
-                        font-normal
-                        min-h-[50px]
-                        max-h-[150px]"></textarea>
-
-        <div class="w-full flex place-content-center mt-3">
-            <a href="#" class="btn text-sm cursor-pointer" id="modal-action-btn">
-                Open
-            </a>
-        </div>
-        
     </div>
-    
+
+</section>
+
+<!-- How it works section -->
+<section class="section-diagonal-top h-full w-full max-w-[100vw] flex flex-col overflow-hidden relative items-center justify-center p-[5%]" id="how-it-works-section">
+
+    <!-- Title -->
+    <h1 class="select-none text-6xl mt-40 md:mt-40 font-mortend-bold text-white uppercase">How It Works</h1>
+    <h2 class="select-none text-xl md:text-2xl mt-5 font-neusa-regular text-white">
+        Learn how FEAST works as the premier solution for the three-sided food delivery marketplace
+    </h2>
+
+    <!-- Image + Steps -->
+    <div class="grid grid-cols-1 xl:grid-cols-2 mt-20 gap-20 justify-center items-center w-full">
+        <!-- Image -->
+        
+        <div class="span-1 w-full">
+            <div class="rounded-[40px] overflow-clip shadow-xl">
+                <img id="main-step-image" src="{% static './assets/images/stock/du-feast-customers.jpg' %}" alt="For eaters and customers" class="w-full h-full">
+            </div>
+        </div>
+
+        <!-- Step List -->
+        <div class="flex flex-col span-1 gap-5" id="step-cards">
+            <!-- Step 1 -->
+            <div data-step="1" class="step-card active flex flex-col md:flex-row">
+                <div class="w-[50px] h-[50px] p-5 lg:p-8 text-white text-md md:text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-secondary">1</div>
+                <div class="flex flex-col">
+                    <h3 class="text-xl md:text-3xl text-white font-neusa-bold">For Eaters and Customers</h3>
+                    <p class="text-md md:text-2xl text-white font-neusa-medium mt-4">Enjoy local flavors, without the markup.</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light">Browse your favorite spots, order seamlessly, and support local restaurants without the inflated delivery fees.</p>
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div data-step="2" class="step-card flex flex-col md:flex-row">
+                <div class="w-[50px] h-[50px] p-5 lg:p-8 text-white text-md md:text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-secondary">2</div>
+                <div class="flex flex-col">
+                    <h3 class="text-xl md:text-3xl text-white font-neusa-bold">For Restaurants and Businesses</h3>
+                    <p class="text-md md:text-2xl text-white font-neusa-medium mt-4">Grow sales without losing your margin.</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light">Take back control with a fair, commission-friendly platform designed to boost orders, visibility, and revenue.</p>
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div data-step="3" class="step-card flex flex-col md:flex-row">
+                <div class="w-[50px] h-[50px] p-5 lg:p-8 text-white text-md md:text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-secondary">3</div>
+                <div class="flex flex-col">
+                    <h3 class="text-xl md:text-3xl text-white font-neusa-bold">For Couriers and Delivery Drivers</h3>
+                    <p class="text-md md:text-2xl text-white font-neusa-medium mt-4">Earn more. Stress less.</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light">Deliver on your terms with transparent pay, better routes, and a platform that puts drivers first.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Delivery App -->
+    <!-- Content to Change -->
+    <div id="step-content" class="select-none grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mt-20">
+        <div class="flex flex-col gap-5">
+            <h2 class="text-3xl md:text-6xl font-mortend-bold text-white uppercase">Customer Delivery App</h2>
+            <p class="text-xl md:text-2xl font-neusa-light text-white">
+                <strong class="font-neusa-bold">Delicious food, delivered fast, with full control</strong>. <br>Our intuitive customer app makes ordering easy,
+                affordable, and transparent from start to finish.
+            </p>
+            <a href="#" class="w-[180px] bg-secondary font-neusa-bold text-white text-xl px-8 py-4 m-2 hover:bg-white hover:text-primary transition-colors rounded-lg text-center">
+                Get Started
+            </a>
+        </div>
+
+        <!-- Carousel -->
+        <div class="w-full h-full owl-carousel">
+            <!-- Item 1 -->
+            <div class="relative rounded-xl overflow-hidden h-[350px]">
+                <div class="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none z-0"></div>
+                <img src="{% static './assets/images/stock/du-feast-8.jpg' %}" class="h-full w-full object-cover" />
+                <div class="absolute bottom-0 w-full text-white p-8 text-start">
+                    <h2 class="font-neusa-light">Live Order Tracking</h2>
+                    <p class="font-neusa-normal text-lg">Follow your meal from kitchen to doorstep in real time!</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="relative rounded-xl overflow-hidden h-[350px]">
+                <div class="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none z-0"></div>
+                <img src="{% static './assets/images/stock/du-feast-13.jpg' %}" class="h-full w-full object-cover" />
+                <div class="absolute bottom-0 w-full text-white p-8 text-start">
+                    <h2 class="font-neusa-light">Smart Reordering</h2>
+                    <p class="font-neusa-normal text-lg">One-tap reorders of your go-to manuals when your crave them!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- What's Next Section -->
+<section class="select-none diagonal-bottom flex flex-col w-full min-h-[100vh] max-w-[100vw] overflow-hidden relative bg-secondary" id="what-next-section">
+    <div class="flex flex-col px-[5%] md:px-10 gap-20 mb-40">
+        <!-- header -->
+        <div class="flex flex-col">
+            <!-- Title -->
+            <h1 class="text-6xl mt-40 font-mortend-bold text-white uppercase">What's next?</h1>
+            <!-- subtitle -->
+            <h2 class="text-xl md:text-2xl mt-5 font-neusa-regular text-white">Find out how to be part of the next generation of food delivery platforms and disrupt the industry.</h2>
+        </div>
+        <!-- Step List -->
+        <div class="flex flex-col md:flex-row gap-5">
+            <!-- Step 1 -->
+            <div class="group flex flex-col gap-5 p-5 md:p-10 border rounded-xl hover:bg-white transition-colors duration-300">
+                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white group-hover:bg-secondary group-hover:text-white transition-colors duration-300">1</div>
+                <div class="flex flex-col">
+                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold group-hover:text-secondary transition-colors duration-300">Restaurant Ownership Opportunities</h3>
+                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 group-hover:text-secondary transition-colors duration-300">Empowering local partners with equity.</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light group-hover:text-secondary transition-colors duration-300">We're building a model where restaurant partners become part-owners in the platform, sharing in profits and decision-making as the network grows. </p>
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="group flex flex-col gap-5 p-5 md:p-10 border rounded-xl hover:bg-white transition-colors duration-300">
+                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white group-hover:bg-secondary group-hover:text-white transition-colors duration-300">2</div>
+                <div class="flex flex-col">
+                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold group-hover:text-secondary transition-colors duration-300">Early Backer Rewards</h3>
+                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 group-hover:text-secondary transition-colors duration-300">Fueling our future, together.</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light  group-hover:text-secondary transition-colors duration-300">Founding investors and early supporters will receive exclusive perks, equity options, and lifetime benefits as part of our gratitude for helping us scale.</p>
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="group flex flex-col gap-5 p-5 md:p-10 border rounded-xl hover:bg-white transition-colors duration-300">
+                <div class="w-[50px] h-[50px] p-8 text-md text-secondary text-2xl font-neusa-medium flex items-center justify-center rounded-full bg-white group-hover:bg-secondary group-hover:text-white transition-colors duration-300">3</div>
+                <div class="flex flex-col">
+                    <h3 class="text-2xl md:text-3xl text-white font-neusa-bold group-hover:text-secondary transition-colors duration-300">Strategic Growth Funding</h3>
+                    <p class="text-md hidden lg:block md:text-2xl text-white font-neusa-medium mt-4 group-hover:text-secondary transition-colors duration-300">Ready for the next big leap</p>
+                    <p class="text-md md:text-lg text-white font-neusa-light group-hover:text-secondary transition-colors duration-300">We're preparing for venture capital funding to accelerate expansion, develop new tech features, and bring equitable delivery to more cities across the country.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="flex flex-col w-full h-full mb-40 md:mb-0 md:min-h-[100vh] md:max-w-[100vw] overflow-hidden relative" id="cta-section">
+    <div class="select-none flex flex-col p-5 md:p-10 text-center">
+
+        <!-- Title -->
+        <h1 class="text-4xl md:text-6xl mt-20 font-mortend-bold uppercase">let´s feast together!  </h1>
+        <!-- Subtitle -->
+        <h2 class="flex flex-col text-xl md:text-2xl mt-5 font-neusa-normal text-gray-600 min-w-[500px] max-w-[850px] text-center mx-auto">Join our newsletter for upcomming information, news, and updates on the FEAST project. Your support is much appreciated!</h2>
+    </div>
+    <div class="flex flex-col p-5 text-center items-center mx-auto w-full md:w-[50%]">
+        <form
+            method="POST"
+            action="{% url 'contact-us' %}"
+            onsubmit="return onSubmit(event)"
+            class="flex flex-col gap-6 rounded-lg overflow-hidden border border-gray-300 w-full p-6 md:p-10 bg-white shadow-lg"
+            >
+            {% if errors %}
+                <div class="text-red-600 font-semibold">{{ errors }}</div>
+            {% endif %}
+            {% csrf_token %}
+
+            <!-- Nombre -->
+            <div class="flex flex-col gap-1">
+                <input
+                type="text"
+                class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none font-neusa-light text-lg w-full"
+                name="name"
+                maxlength="30"
+                required
+                value="{{ data.name }}"
+                placeholder="Your Name"
+                />
+            </div>
+
+            <!-- Teléfono -->
+            <div class="flex flex-col gap-1">
+                <div class="flex gap-2">
+                <select
+                    name="country-codes"
+                    id="country-codes"
+                    class="rounded-lg font-neusa-bold text-lg w-[30%] input"
+                ></select>
+                <input
+                    type="text"
+                    class="px-4 py-3 border border-gray-300 rounded-lg font-neusa-light text-lg w-full"
+                    maxlength="15"
+                    required
+                    value="{{ data.phone|phone_number }}"
+                    name="phone-number"
+                    placeholder="Your Phone Number"
+                />
+                <input type="hidden" name="phone" value="{{ data.phone }}" />
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex flex-col gap-1">
+                <input
+                type="email"
+                class="px-4 py-3 border border-gray-300 rounded-lg font-neusa-light text-lg w-full"
+                required
+                name="email"
+                maxlength="250"
+                placeholder="Your Email"
+                value="{{ data.email }}"
+                />
+            </div>
+
+            <!-- Mensaje -->
+            <div class="flex flex-col gap-1">
+                <textarea
+                class="px-4 py-3 border border-gray-300 rounded-lg font-neusa-light text-lg w-full resize-y max-h-[250px] min-h-[100px]"
+                name="description"
+                maxlength="1200"
+                required
+                placeholder="Your Message"
+                >{{ data.description }}</textarea>
+            </div>
+
+            <!-- Botón -->
+            <button
+                type="submit"
+                class="bg-primary text-white font-neusa-bold text-xl px-8 py-4 mt-4 hover:bg-secondary transition-colors rounded-lg self-end flex items-center gap-2"
+            >
+                <span>Contact Us</span>
+            </button>
+        </form>
+    </div>
+</section>
 {% endblock content %}
 
 {% block scripts %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- jQuery (required by Owl Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script src="{% static "./js/home.js" %}"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+    <!-- App Scripts -->
+    <script src="{% static './js/home.js' %}"></script>
+    <script src="{% static './js/inquiry/inquiry.js' %}"></script>
+
+    <!-- Base path for dynamic image loading -->
+    <script>
+        const staticBase = "{% static 'assets/images/stock/' %}";
+    </script>
+
+    <!-- Carousel logic (Owl init is handled inside this file dynamically) -->
+    <script src="{% static './js/carousel.js' %}"></script>
+    
 {% endblock scripts %}

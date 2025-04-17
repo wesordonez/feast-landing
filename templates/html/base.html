@@ -59,6 +59,10 @@
         gtag('config', '{% settings_value "ANALYTICS_TAG_ID" %}');
     </script>
 
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
     {% block head_tags %}
     {% endblock head_tags %}
 
@@ -67,165 +71,37 @@
 {% comment %} <body class="min-h-[100vh]" data-bs-theme="dark"> {% endcomment %}
 <body class="min-h-[100vh] w-full bg-[#ffffff] flex flex-col">
     
-    <div id="toast" class="p-2 px-4 bg-black h-max z-[5000] fixed 
-                            top-[5%] left-[50%] translate-x-[-50%] 
-                            place-items-center
-                            hidden rounded-md
-                            border-0 text-white" 
-                    role="alert">
-        <div class="flex gap-1">
-          <div class="toast-body" id="toast-body">
-           
-          </div>
-          <button type="button" class="bi bi-x text-lg" aria-label="Close"></button>
-        </div>
-    </div>
 
-    <header class="flex w-full z-20
-                    h-[60px]  
-                    lg:justify-around
-                    absolute top-0 px-[10%]
-                    max-lg:mr-auto
-                    bg-white
-                    text-black
-                    ">
-
-        <a class="w-[50px] h-[50px] p-[4px]" href="{% url "home" %}">
-            <img src="{% static "assets/logos/logo1.png" %}" 
-                  alt="logo" class="w-full h-full object-contain">
-
-        </a>
-        <div class="collapsable-header animated-collapse max-lg:shadow-md"
-                    id="collapsed-header-items"
-                    >
-            <div class=" w-max
-                            text-base 
-                            flex gap-5 h-full lg:mx-auto
-                            lg:place-items-center 
-                            max-lg:place-items-end
-                            max-lg:flex-col
-                            max-lg:mt-[50px]
-                            max-lg:gap-5
-                            text-black
-                        ">
-                    
-                <a class="header-links" href="{% url "home" %}">
-                    About us
-                </a>
-                <a class="header-links" href="{% url "blogs" %}"
-                        rel="noreferrer"
-                        >
-                    Blogs
-                </a>
-                <a class="header-links" href="{% url "contact-us" %}"
-                        rel="noreferrer"
-                        >
-                    Contact us
-                </a>
-            </div>
-            <div class="flex gap-[20px] place-items-center text-xl
-                         max-lg:!text-white
-                         max-lg:place-content-center
-                        max-lg:w-full
-                         max-lg:place-items-start
-                         ">
-                <a href="https://www.facebook.com/" 
-                        target="_blank" 
-                        rel="noreferrer"
-                        aria-label="facebook"
-                        class=" header-links
-                                transition-colors
-                                duration-[0.3s]
-                                "
-                        >
-                    <i class="bi bi-facebook"></i>
-                </a>
-
-                <a href="https://www.instagram.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label="instagram"
-                        class="header-links
-                                transition-colors
-                                duration-[0.3s]
-                                "
-                            >
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://github.com/PaulleDemon"
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label="github"
-                        class="header-links
-                                transition-colors
-                                duration-[0.3s]
-                                "
-                            >
-                    <i class="bi bi-github"></i>
-                </a>
-            </div>
-        </div>
-        <button class="absolute text-black z-50 
-                        right-3
-                        top-3
-                        
-                         text-3xl  bi bi-list lg:hidden" 
-                onclick="toggleHeader()" aria-label="menu" id="collapse-btn">
-            <!-- <i class="bi bi-list"></i> -->
-        </button>
-    </header>
-
-    <div class="w-full h-full mt-[50px]">
+    <div class="w-full h-full">
         {% block content %}{% endblock content %}
     </div>
-    <footer class="flex max-md:flex-col w-full p-[5%]
-                    px-[10%] place-content-around gap-3 
-                    text-black
-                    mt-auto
-                    ">
-        <div class="h-full w-[250px] flex flex-col 
-                    gap-6 place-items-center max-md:w-full">
+    <footer class="flex max-md:flex-col w-full p-[5%] px-[10%] place-content-around gap-3 text-black mt-auto">
+        <div class="h-full w-full flex flex-col gap-10 place-items-center max-md:w-full">
             
-            <img src="{% static "assets/logos/logo1.png" %}" 
-                alt="logo"  class="max-w-[150px] max-md:max-w-[120px]">
-            <div>
-                2 Lord Edward St,   
-                <br>
-                D02 P634,
-                <br>
-                United States
+            <img src="{% static "assets/logos/du-feast-logo.png" %}" 
+                alt="Feast logo"  class="max-w-[150px] max-md:max-w-[150px]">
+
+            <div class=" flex flex-row gap-10 max-md:text-sm font-neusa-light">
+                <a href="#how-it-works-section" class="hover:text-primary">How it works</a>
+                <a href="#what-next-section" class="hover:text-primary">What's next</a>
+                <a href="#cta-section" class="hover:text-primary">Contact Us</a>
             </div>
-            <div class="mt-3 font-semibold text-lg">
-                Follow us
-            </div>
-            <div class="flex gap-4 text-2xl">
+            <hr class="w-[50%] md:w-[20%] border border-black/50 md:my-4" />
+            <div class="flex gap-10 text-2xl">
                 <a href="https://facebook.com/" aria-label="Facebook">
-                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-facebook hover:text-primary"></i>
+                </a>
+                <a href="https://instagram.com/" aria-label="Instagram">
+                    <i class="bi bi-instagram hover:text-primary"></i>
                 </a>
                 <a href="https://twitter.com/pauls_freeman" aria-label="Twitter">
-                    <i class="bi bi-twitter"></i>
-                </a>
-                <a href="https://instagram.com/" class="w-[40px] h-[40px]" aria-label="Instagram">
-                   <i class="bi bi-instagram"></i>
+                    <i class="bi bi-twitter hover:text-primary"></i>
                 </a>
             </div>
+            <p class="font-neusa-light text-gray-600">&copy; Copyright 2025. All rights reserved <a href="www.dunosis.com" class="font-bold">by Dunosis</a></p>
         </div>
 
-        <div class="h-full w-[250px] flex flex-col 
-                    gap-4">
-
-            <h2 class="text-3xl max-md:text-xl">
-                Resources
-            </h2>
-            <div class=" flex flex-col gap-3 max-md:text-sm">
-                <a href="{% url "home" %}" class="footer-link">About us</a>
-                <a href="" class="footer-link">FAQ</a>
-                <a href="{% url "contact-us" %}" class="footer-link">Contact Us</a>
-                <a href="" class="footer-link">Privacy policy</a>
-            </div>
-
-        </div>
-
+       
         {% block footer %}
         {% endblock footer %}
 
@@ -244,7 +120,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.1/dist/browser-image-compression.js"></script>
 
 <script>
-    const STATIC_URL = "{% settings_value "STATIC_URL" %}" 
+    const STATIC_URL = "{% settings_value 'STATIC_URL' %}"
 </script>
 
 <script src="{% static "./js/utils/elements.js" %}"></script>

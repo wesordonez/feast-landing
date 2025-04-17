@@ -7,7 +7,7 @@
 
 module.exports = {
     prefix: '',
-	important: false,
+    important: false,
     content: [
         /**
          * HTML. Paths to Django template files that will contain Tailwind CSS classes.
@@ -49,7 +49,23 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                primary: '#89171A',
+                secondary: '#A57E2C',
+            },
+            fontFamily: {
+                'mortend-light': ['Mortend-light','sans-serif'],
+                'mortend-regular': ['Mortend-regular','sans-serif'],
+                'mortend-bold': ['Mortend-bold','sans-serif'],
+                'mortend-extrabold': ['Mortend-extrabold','sans-serif'],
+                'mortend-outline': ['Mortend-outline','sans-serif'],
+                'neusa-light': ['Neusa-light','sans-serif'],
+                'neusa-regular': ['Neusa-regular','sans-serif'],
+                'neusa-medium': ['Neusa-medium','sans-serif'],
+                'neusa-bold': ['Neusa-bold','sans-serif'],
+            },
+        },
     },
     plugins: [
         /**
