@@ -1061,10 +1061,6 @@ video {
   border-width: 1px;
 }
 
-.border-8 {
-  border-width: 8px;
-}
-
 .border-black\/50 {
   border-color: rgb(0 0 0 / 0.5);
 }
@@ -1651,11 +1647,6 @@ video {
 
   .lg\:flex-col {
     flex-direction: column;
-  }
-
-  .lg\:border-secondary {
-    --tw-border-opacity: 1;
-    border-color: rgb(165 126 44 / var(--tw-border-opacity, 1));
   }
 
   .lg\:p-8 {
