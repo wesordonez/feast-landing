@@ -50,6 +50,6 @@ def inquiry_api_view(request):
 def inquiry_success(request):
 
     return render(request, "components/pages/success.html", {
-        'title': 'Inquiry Submitted', 
-        'description': 'Thank you for taking time to submit an inquiry, our team will be in touch shortly.'
+        'title': 'Success!', 
+        'description': 'Thank you for taking time to reach out. A member of our team will reach out shortly.'
     })

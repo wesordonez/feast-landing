@@ -12,8 +12,8 @@
 {% endblock head %} {% endcomment %}
 
 
-{% block title %}Contact us Form - {% endblock title %}
-{% block description %}Contact us{% endblock description %}
+{% block title %}Contact FEAST Form - {% endblock title %}
+{% block description %}Contact FEAST{% endblock description %}
 
 {% block content %}
 
@@ -42,10 +42,10 @@
 
                 <div class="flex flex-col gap-2">
                     <h2 class="text-5xl max-md:text-xl primary-text-color font-medium">
-                        Contact us
+                        Contact FEAST!
                     </h2>
-                    <h3 class="text-3xl max-md:text-3xl">
-                        Get your Template
+                    <h3 class="text-3xl max-md:text-3xl text-center font-light">
+                        A member of our team will reach out shortly.
                     </h3>
                 </div>
                 <div
@@ -99,14 +99,14 @@
                         </div>
 
                         <div class="flex flex-col w-full gap-2">
-                            <div class="text-gray-500">Enquiry</div>
+                            <div class="text-gray-500">Inquiry</div>
                             <textarea
                                 class="input resize-y w-full max-h-[250px] min-h-[40px]"
                                 name="description"
                                 maxlength="1200"
                                 required
                                 value="{{data.description}}"
-                                placeholder="enquiry"
+                                placeholder="Inquiry"
                             >{{data.description}}</textarea
                             >
                         </div>
@@ -114,7 +114,7 @@
 
                     <button
                         type="submit"
-                        class="btn transition-transform hover:translate-x-2 duration-[0.3s] mt-5 ml-auto"
+                        class="bg-primary text-white font-neusa-bold text-xl px-8 py-4 mt-4 hover:bg-secondary transition-colors rounded-lg self-end flex items-center gap-2"
                     >
                         <span>Submit</span>
                         <i class="bi bi-arrow-right"></i>
