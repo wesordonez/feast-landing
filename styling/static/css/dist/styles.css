@@ -1285,8 +1285,20 @@ video {
   line-height: 1.375;
 }
 
+.leading-5 {
+  line-height: 1.25rem;
+}
+
 .tracking-normal {
   letter-spacing: 0em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
 }
 
 .\!text-blue-500 {

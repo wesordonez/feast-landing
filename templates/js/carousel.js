@@ -74,7 +74,7 @@ steps.forEach(card => {
                 <div class="flex flex-col gap-5">
                     <h2 class="text-3xl md:text-6xl font-mortend-bold text-white uppercase">${data.title}</h2>
                     <p class="text-xl md:text-2xl font-neusa-light text-white">
-                        <strong class="font-neusa-bold">${data.subtitle}</strong>.<br>${data.text}
+                        <strong class="font-neusa-medium tracking-wide">${data.subtitle}</strong>.<br>${data.text}
                     </p>
                     <a href="cta-section" class="w-[180px] bg-secondary font-neusa-bold text-white text-xl px-8 py-4 m-2 hover:bg-white hover:text-primary transition-colors rounded-lg text-center">
                         Get Started
