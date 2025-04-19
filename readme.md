@@ -1,6 +1,6 @@
 # FEAST Landing Page Source Code
 
-### What features does this souce code include?
+### What features does this source code include?
 - Production ready, you can immediately deploy this to Digital Ocean.
 - Comes with a landing, about us, blog, and contact page that you can modify.
 - Responsive design.
@@ -92,7 +92,7 @@ python manage.py createsuperuser
 
 Follow the prompts and test at: https:localhost:8000/admin/
 
-## Trouble Shooting
+## Troubleshooting
 **Note:** If you are facing problems starting this program in windows OS, remove logging from project/settings.py
 
 ## Deployment:
