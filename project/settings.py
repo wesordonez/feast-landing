@@ -162,7 +162,7 @@ else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # for production
 
     EMAIL_HOST = os.environ.get('EMAIL_HOST') #eg: smtpout.secureserver.net
-    EMAIL_PORT = 587
+    EMAIL_PORT = 465
 
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER') # eg: info@mail.com
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
