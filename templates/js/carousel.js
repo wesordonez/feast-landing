@@ -76,7 +76,7 @@ steps.forEach(card => {
                     <p class="text-xl md:text-2xl font-neusa-light text-white">
                         <strong class="font-neusa-bold">${data.subtitle}</strong>.<br>${data.text}
                     </p>
-                    <a href="#" class="w-[180px] bg-secondary font-neusa-bold text-white text-xl px-8 py-4 m-2 hover:bg-white hover:text-primary transition-colors rounded-lg text-center">
+                    <a href="cta-section" class="w-[180px] bg-secondary font-neusa-bold text-white text-xl px-8 py-4 m-2 hover:bg-white hover:text-primary transition-colors rounded-lg text-center">
                         Get Started
                     </a>
                 </div>
@@ -85,7 +85,7 @@ steps.forEach(card => {
                     ${data.images.map(img => `
                         <div class="relative rounded-xl overflow-hidden h-[350px]">
                             <div class="absolute bottom-0 w-full h-full bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none z-0"></div>
-                            <img src="${staticBase}${img.img}" alt="${img.title}" class="h-full w-full object-cover" />
+                            <img src="${staticBase}${img.img}" alt="${img.title}" class="h-full w-full object-cover" loading="lazy"/>
                             <div class="absolute bottom-0 w-full text-white p-8 text-start">
                                 <h2 class="font-neusa-light">${img.title}</h2>
                                 <p class="font-neusa-normal text-lg">${img.subtitle}</p>
