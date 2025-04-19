@@ -20,12 +20,12 @@
             content="{% block description %}Building websites that brings you business{% endblock description %}">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="{% block socialTitle %}{% endblock socialTitle %} Project" />
+    <meta property="og:title" content="{% block socialTitle %}{% endblock socialTitle %} FEAST" />
     <meta property="og:description" 
-                        content="{% block socialDescription %}Description Here{% endblock socialDescription %}" />
+                        content="{% block socialDescription %}FEAST, an alternative restaurant delivery marketplace without the crippling fees.{% endblock socialDescription %}" />
     <meta property="og:type" content="{% block pageType %}website{% endblock pageType %}" />
     <meta property="og:url" content="{% block pageLink %}{{request.build_absolute_uri}}{% endblock pageLink %}" />
-    <meta property="og:image" content="{% block pageImage %}{{ request.scheme }}://{{request.get_host}}{% static "./assets/images/home/hiking4.jpg" %}{% endblock pageImage %}" />
+    <meta property="og:image" content="{% block pageImage %}{{ request.scheme }}://{{request.get_host}}{% static "./assets/images/stock/image-hero.jpg" %}{% endblock pageImage %}" />
 
     <!-- Twitter -->
     {% comment %} 
@@ -58,6 +58,9 @@
 
         gtag('config', '{% settings_value "ANALYTICS_TAG_ID" %}');
     </script>
+
+    <!-- Plausible Analytics -->
+    <script defer data-domain="feast-landing-mtksf.ondigitalocean.app" src="https://analytics.dunosis.com/js/script.tagged-events.js"></script>
 
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -98,7 +101,7 @@
                     <i class="bi bi-twitter hover:text-primary"></i>
                 </a>
             </div>
-            <p class="font-neusa-light text-gray-600">&copy; Copyright 2025. All rights reserved <a href="www.dunosis.com" class="font-bold">by Dunosis</a></p>
+            <p class="font-neusa-light text-gray-600">&copy; Copyright 2025 FEAST. All rights reserved. <a href="https://www.dunosis.com" class="font-light underline">Made by Dunosis</a></p>
         </div>
 
        
